@@ -73,8 +73,21 @@ h2 {
          height: 18px;
       }
 
+      &__content {
+         display: flex;
+         height: 100%;
+         width: 100%;
+         flex-direction: column;
+         justify-content: center;
+         position: relative;
+      }
+
       &__invitation {
          margin-bottom: 2em;
+         position: absolute;
+         bottom: 0;
+         left: 10%;
+         right: 10%;
       }
 		&__invitation-a {
          font-size: 2.1rem;
@@ -83,7 +96,7 @@ h2 {
    .container {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      // justify-content: space-between;
       height: 100%;
    }
 }
@@ -177,10 +190,12 @@ h2 {
       .container {
          justify-content: unset;
       }
+      &__invitation {
+         position: relative;
+         left: 0;
+      }
    }
-   h1 {
-      margin-top: 2.7em;
-   }
+
    .register {
       width: 35%;
       .container {
