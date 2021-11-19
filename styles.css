@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,400&family=Raleway:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+html {
+   font-size: 16px;
+}
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: 'Raleway', sans-serif;
+   font-size: 1rem;
+   margin: 0;
+   line-height: 1.4;
+}
+header {
+   background-color: #be3144;
+   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+   position: fixed;
+   width: 100%;
+}
+h1,
+h2,
+p {
+   margin-top: 0;
+}
+h1 {
+   font-size: 3.5rem;
+   margin-bottom: 0;
+}
+h2 {
+   text-align: center;
+   color: rgba(240, 240, 240, 0.85);
+   font-size: 2.5rem;
+   border-bottom: 0.15rem solid rgba(240, 240, 240, 0.85);
+   max-width: 650px;
+   margin: 0 auto 2em;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+a {
+   text-decoration: none;
+}
+.container {
+   width: 95%;
+   max-width: 1300px;
+   margin: 0 auto;
+}
+.flex {
+   display: flex;
+}
+.flex-end {
+   justify-content: flex-end;
+}
+#navbar ul{
+   margin: 0;
+}
+#navbar li {
+   list-style: none;
+   padding: 0.8em 1em;
+   font-size: 1.4rem;
+}
+#navbar li:hover {
+   background: #45567d;
+}
+#navbar a {
+   text-decoration: none;
+   font-family: 'Poppins', sans-serif;
+   color: rgba(240, 240, 240, 0.85);
+}
+@media(max-width: 450px) {
+   #navbar li {
+      padding: 1.2em 1em;
+   }
+}
+@media(max-width: 950px) {
+   #navbar li {
+      margin-left: 0;
+   }
+   #navbar ul {
+      margin-left: 0;
+      padding-left: 0;
+   }
+   header .container {
+      justify-content: center;
+   }
+}
+
+/*======================
+      end of header
+ ===================== */
+
+#welcome-section {
+   text-align: center;
+   color: rgba(240, 240, 240, 0.85);
+   background-color: #404040;
+   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+   height: 100vh;
+}
+#welcome-section p {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 200;
+   font-size: 2rem;
+   color: rgb(190, 49, 68);
+   font-style: italic;
+}
+#welcome-section .container {
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/*----- end of welcome-section ------ */
+
+#projects {
+   background: #45567d;
+   padding-top: 6em;
+   padding-bottom: 5em;
+}
+.project-tile {
+   width: 85%;
+   margin: 0 auto;
+   border-bottom-right-radius: 3px;
+   border-bottom-left-radius: 3px;
+   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   padding-bottom: 0;
+   margin-bottom: 4em;
+}
+.project-flex {
+   margin: 0;
+   padding: 0;
+}
+#projects p {
+   color: rgba(240, 240, 240, 0.85);
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.2rem;
+   text-align: center;
+   margin: 0;
+   line-height: normal;
+   font-size: 1.2rem;
+   padding: 3% 0;
+   background: #303841;
+}
+.project-tile {
+   display: flex;
+   flex-direction: column;
+}
+.code {
+   color: #303841;
+   transition: color 0.3s ease-out;
+ }
+ 
+ .project-tile:hover .code,
+ .project-tile:focus .code {
+   color: #ff7f50;
+ }
+
+ .btn {
+   color:rgba(240, 240, 240, 0.85);
+   display: block;
+   padding: 0.5em 1em;
+   border-radius: 2px;
+   width: 200px;
+   text-align: center;
+   margin: 0 auto;
+ }
+ 
+ .btn-show-all {
+   font-size: 1.3rem;
+   background: #303841;
+   transition: background 0.3s ease-out;
+ }
+ 
+ .btn-show-all:hover {
+   background: rgb(190, 49, 68);
+ }
+
+@media(min-width:950px) {
+   .projects-flex {
+      display: flex;
+   }
+   .project-tile {
+      width: 31%;
+   }
+   #projects img {
+      height: 100%;
+      object-fit: cover;
+   }
+   .img-d {
+      height: 200px;
+   }
+}
+
+/* ======================== 
+   end of projects section 
+===========================*/
+
+.contact-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   height: 80vh;
+   /* padding: 3em 0; */
+   background: #303841;
+ }
+ 
+.contact-section-header h2 {
+   font-size: 4rem;
+   margin-bottom: 0;
+   border: 0;
+}
+
+@media (max-width: 400px) {
+   .contact-section-header h2 {
+      font-size: 3rem;
+   }
+}
+
+.contact-section-header p {
+   font-style: italic;
+   color: #f0f0f0;
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.3rem;
+   font-weight: 200;
+}
+
+.contact-links {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   max-width: 980px;
+   margin-top: 2em;
+   flex-wrap: wrap;
+   padding: 0;
+   margin: 0;
+}
+
+.contact-details {
+   font-size: 1.8rem;
+   text-shadow: 2px 2px 1px #1f1f1f;
+   transition: transform 0.3s ease-out;
+   padding: 0 1em;
+   margin: 0;
+   width: fit-content;
+}
+
+.contact-details:hover {
+   transform: translateY(8px);
+}
+
+footer {
+   font-weight: 300;
+   display: flex;
+   justify-content: flex-end;
+   padding: 2rem;
+   background: #303841;
+   border-top: 4px solid rgb(190, 49, 68);
+}
+
+footer p {
+   color: rgba(240, 240, 240, 0.85);
+   margin: 0;
+   margin-right: 2em;
+   font-size: 1.2rem;
+}
+footer a {
+   color: rgba(240, 240, 240, 0.85);
+}
+
+
+
+
+
