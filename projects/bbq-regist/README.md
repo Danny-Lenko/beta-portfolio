@@ -1,0 +1,1 @@
+# The active functionality quick registraion form

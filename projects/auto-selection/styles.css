@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+body {
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   background: linear-gradient(90deg, rgba(116,116,188,0.4) 35%, rgba(116,116,188,0.4) 100%), url(./images/1.jpg) 0 0/cover no-repeat fixed;
+   color: #fff;
+}
+h1 {
+   text-align: center;
+   margin: 1.5em 0 0;
+}
+#description {
+   text-align: center;
+   font-style: italic;
+   margin-top: 0;
+   margin-bottom: 1.7em;
+}
+
+.container {
+   width: 90%;
+   max-width: 650px;
+   margin: 0 auto;
+}
+
+#survey-form {
+   padding: 1em 2em;
+   border-radius: 4px;
+   z-index: 3;
+   background: rgba(27, 27, 50, 0.8);
+   color: #fff;
+   font-size: 1.125rem;
+}
+
+#name,
+#email,
+#number,
+#dropdown,
+#maxprice,
+#msg, 
+.options label,
+.fuel label {
+   display: block;
+}
+
+#name,
+#email,
+#number,
+#dropdown,
+#maxprice,
+#msg {
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 1.055rem;
+   padding: 0.5em 0;
+   border-radius: 4px;
+   border: none;
+   outline: none;
+   padding-left: 0.5em;
+   margin-top: 0.3em;
+}
+
+#msg {
+   border-radius: 2px;
+   height: 120px;
+}
+
+span {
+   font-size: 0.8rem;
+}
+
+.options label,
+.fuel label {
+   margin-top: 0.3em;
+   position: relative;
+   padding-left: 30px;
+}
+
+.options label:first-child,
+.fuel label:first-child {
+   margin-bottom: 0.5em;
+   margin-top: 1.5em;
+   padding-left: 0;
+}
+
+.fuel input,
+.options input {
+   width: 17px;
+   height: 17px;
+   position: absolute;
+   left: 0;
+}
+
+.fuel input {
+   bottom: 5.5px;
+}
+.options input {
+   bottom: 2.5px;
+}
+
+#submit {
+   width: 100%;
+   padding: 0.7em 0;
+   background: #37af65;
+   border: none;
+   outline: none;
+   font-size: 1.055rem;
+   font-weight: 400;
+   color: #fff;
+   border-radius: 2px;
+   cursor: pointer;
+   margin: 1em 0 2em;
+}
+
+
+
+

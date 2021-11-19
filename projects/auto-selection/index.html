@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Survey Form</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">
+      <h1 id="title">Auto Selection Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <form id="survey-form" action="/my-hanling-form-page" method="post">
+         <p>
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="first_name" id="name" placeholder="Enter your name" required>
+         </p>
+         <p>
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="user_email" id="email" placeholder="Enter your email" required>
+         </p>
+         <p>
+            <label id="number-label" for="number">Age</label>
+            <input type="number" name="user_age" id="number" min="16" max="99" placeholder="Enter your age">
+         </p>
+         <p>
+            <label for="dropdown">Which option best describes your preferences?</label>
+            <select name="dropdown" id="dropdown">
+               <option disabled>Select vehicle type</option>
+               <option value="sedan">Sedan</option>
+               <option value="suv">SUV</option>
+               <option value="van">Van</option>
+               <option value="coupe">Coupe</option>
+               <option value="wagon">Wagon</option>
+               <option value="hatchback">Hatchback</option>
+               <option value="sport">Sport Car</option>
+            </select>
+         </p>
+         <p class="fuel">
+            <label>What type of fuel would you choose?</label>
+            <label><input value="petrol" type="radio" name="fuel">Petrol</label>
+            <label><input value="diesel" type="radio" name="fuel">Diesel</label>
+            <label><input value="electric" type="radio" name="fuel">Electric</label>
+         </p>
+         <p>
+            <label for="maxprice">Choose maximum price, $</label>
+            <select name="maxprice" id="maxprice">
+               <option disabled>Max price</option>
+               <option value="5000">5000</option>
+               <option value="7000">7000</option>
+               <option value="10000">10000</option>
+               <option value="12000">12000</option>
+               <option value="15000">15000</option>
+               <option value="20000">20000</option>
+               <option value="30000">30000</option>
+               <option value="more">more</option>
+            </select>
+         </p>
+         <p class="options">
+            <label>What would you like to have the most? <span>(Check up to 4 options)</span></label>
+            <label>
+               <input value="auto-transmission" type="checkbox" name="options">Auto Transmission
+            </label>
+            <label>
+               <input value="climate-control" type="checkbox" name="options">Climate Control
+            </label>
+            <label>
+               <input value="sunroof" type="checkbox" name="options">Sunroof
+            </label>
+            <label>
+               <input value="certain-color" type="checkbox" name="options">Certain Color
+            </label>
+            <label>
+               <input value="extra-performance" type="checkbox" name="options">Extra Performance
+            </label>
+            <label>
+               <input value="4X4" type="checkbox" name="options">4X4
+            </label>
+            <label>
+               <input value="heated-seats" type="checkbox" name="options">Heated Seats
+            </label>
+            <label>
+               <input value="luxurious-materials" type="checkbox" name="options">Luxurious Materials
+            </label>
+         </p>
+         <p>
+            <label for="msg">Any comments or suggestions?</label>
+            <textarea id="msg" name="msg" placeholder="Enter your comment here..."></textarea>
+         </p>
+         <p>
+            <input id="submit" type="submit" value="Submit">
+         </p>
+      </form>
+   </div>
+
+</body>
+</html>

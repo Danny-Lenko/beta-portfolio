@@ -156,6 +156,11 @@ a {
    color: #ff7f50;
  }
 
+.img-d > img {
+   width: 100%;
+   object-fit: cover;
+}
+
  .btn {
    color:rgba(240, 240, 240, 0.85);
    display: block;
