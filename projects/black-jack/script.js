@@ -1,68 +1,58 @@
 "use strict";
 
-let sum;
-let cards = [];
-let newCard;
-const startBtn = document.querySelector('#start-btn');
 const cardsEl = document.querySelector('#cards-el');
-const sumEl = document.querySelector('#sum-el');
-const newCardBtn = document.querySelector('#new-card-btn');
-const messageEl = document.querySelector('#message-el');
+let firstCard;
+let secondCard;
+let sum;
 
-let isAlive = false;
-let hasBlackJack;
+document.querySelector('#start-btn').addEventListener('click', startNewGame);
+document.querySelector('#new-card-btn').addEventListener('click', getNewCard);
 
-startBtn.addEventListener('click', function() {
-   const firstCard = getRandom();
-   const secondCard = getRandom();
-   cards = [firstCard, secondCard];
+function startNewGame() {
+   getFirstCards();
+   cardsEl.innerHTML = `Cards: ${firstCard}, ${secondCard}`;
    sum = firstCard + secondCard;
-   isAlive = true;
-   hasBlackJack = false;
+   renderSum();
+   showMessage();
+}
 
-   renderGame();
-})
+function getNewCard() {
+   if (sum < 21) {
+      let newCard = getRandom();
+      cardsEl.innerHTML += `, ${newCard}`;
+      sum += newCard;
+      renderSum();
+      showMessage();   
+   }
+}
+
+function getFirstCards() { 
+   firstCard = getRandom();
+   secondCard = getRandom();
+}
 
 function getRandom() {
-   let randomCard = Math.floor(Math.random() * 13) + 1;
-   if (randomCard == 1) {
-      return 11
-   } else if (randomCard > 10) {
-      return 10
-   } else {
-      return randomCard;
+   let randomCard = Math.floor(Math.random() * 13 + 1);
+   if (randomCard > 10) {
+      randomCard = 10;
+   } else if (randomCard === 1) {
+      randomCard = 11;
    }
+   return randomCard;
 }
 
-newCardBtn.addEventListener('click', function() {
-   if ( isAlive && !hasBlackJack ) {
-      newCard = getRandom();
-      cards.push(newCard)
-      sum += newCard;
-      
-      renderGame();
-   }
-})
+function renderSum() {
+   const sumEl = document.querySelector('#sum-el');
+   sumEl.innerHTML = `Sum: ${sum}`; 
+}
 
-function renderGame() {
-   let myCards = "";
-   for (let i = 0; i < cards.length; i++) {
-      myCards += cards[i] + " "; 
-   }
-   cardsEl.textContent =`Cards: ${myCards}`;
-
-   sumEl.innerHTML = `Sum: ${sum}`;
-   
+function showMessage() {
+   const messageEl = document.querySelector('#message-el');
    if (sum < 21) {
-      isAlive = true;
-      messageEl.innerHTML = "Want to draw a new card?"
-   } else if (sum === 21) {
-      hasBlackJack = true;
-      messageEl.innerHTML = "You've got Blackjack!"
+      messageEl.innerHTML = "Feel like a new card?"
+   } else if (sum > 21) {
+      messageEl.innerHTML = "You're out of the game"
    } else {
-      isAlive = false;
-      messageEl.innerHTML = "You're out of the game."
+      messageEl.innerHTML = "You've got Blackjack!"
    }
 }
-
-

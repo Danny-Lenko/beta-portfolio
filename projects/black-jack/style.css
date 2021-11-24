@@ -29,7 +29,14 @@ button {
    font-weight: bold;
    text-transform: uppercase;
    border-radius: 2px;
+   cursor: pointer;
 }
 p {
    margin: 10px 0;
+}
+.flex {
+   display: flex;
+   flex-direction: column;
+   height: 80vh;
+   justify-content: center;
 }
