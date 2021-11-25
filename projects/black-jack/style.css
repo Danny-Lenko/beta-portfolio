@@ -30,6 +30,7 @@ button {
    text-transform: uppercase;
    border-radius: 2px;
    cursor: pointer;
+   display: block;
 }
 p {
    margin: 10px 0;
@@ -39,4 +40,8 @@ p {
    flex-direction: column;
    height: 80vh;
    justify-content: center;
+}
+#save-btn {
+   display: none;
+   background-color: #e38952;
 }

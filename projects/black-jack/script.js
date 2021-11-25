@@ -1,11 +1,15 @@
 "use strict";
 
 const cardsEl = document.querySelector('#cards-el');
+const startBtn = document.querySelector('#start-btn');
+const saveBtn = document.querySelector('#save-btn');
+
 let firstCard;
 let secondCard;
 let sum;
 
-document.querySelector('#start-btn').addEventListener('click', startNewGame);
+startBtn.addEventListener('click', startNewGame);
+saveBtn.addEventListener('click', renderResults);
 document.querySelector('#new-card-btn').addEventListener('click', getNewCard);
 
 function startNewGame() {
@@ -14,6 +18,10 @@ function startNewGame() {
    sum = firstCard + secondCard;
    renderSum();
    showMessage();
+
+   startBtn.style.display = "none";
+   saveBtn.style.display = "block";
+
 }
 
 function getNewCard() {
@@ -56,3 +64,13 @@ function showMessage() {
       messageEl.innerHTML = "You've got Blackjack!"
    }
 }
+
+function renderResults() {
+   let playerResultsArr = [];
+   playerResultsArr.push(sum);
+   console.log(playerResultsArr);
+
+   saveBtn.style.display = "none";
+   startBtn.style.display = "block";
+}
+
