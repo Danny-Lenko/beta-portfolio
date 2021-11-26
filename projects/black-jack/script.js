@@ -4,9 +4,11 @@ const cardsEl = document.querySelector('#cards-el');
 const startBtn = document.querySelector('#start-btn');
 const saveBtn = document.querySelector('#save-btn');
 const messageEl = document.querySelector('#message-el');
+const playerEl = document.querySelector('#player-el');
 
 let sum;
 let roundNumber = 1;
+let totalScore = 0;
 
 startBtn.addEventListener('click', startNewGame);
 saveBtn.addEventListener('click', renderResults);
@@ -21,6 +23,9 @@ function startNewGame() {
    showMessage();
 
    toggleBtns(startBtn, saveBtn);
+   if (roundNumber === 1) {
+      playerEl.innerHTML = "Player:";
+   }
 }
 
 function getNewCard() {
@@ -59,22 +64,24 @@ function showMessage() {
 }
 
 function renderResults() {
-   const playerEl = document.querySelector('#player-el');
    toggleBtns(saveBtn, startBtn);
-   playerEl.innerHTML += ` ${calcResult()}`;
+   playerEl.innerHTML += ` ${getResults()}`;
    showRoundNumber();
 }
 
-function calcResult() {
-   let playerResults = 0;
+function getResults() {
+   let playerResult = 0;
    if (sum === 21) {
-      playerResults = 31;
+      playerResult = 31;
+      totalScore += 31;
    } else if (sum > 21) {
-      playerResults = 0;
+      playerResult = 0;
+      totalScore += 0;
    } else {
-      playerResults = sum;
+      playerResult = sum;
+      totalScore += sum;
    }
-   return playerResults;
+   return playerResult;
 }
 
 function toggleBtns(none, block) {
@@ -84,5 +91,11 @@ function toggleBtns(none, block) {
 
 function showRoundNumber() {
    roundNumber++;
-   messageEl.innerHTML = `Player, start round ${roundNumber}`
+   messageEl.innerHTML = `Player, start round ${roundNumber}`;
+   if (roundNumber > 3) {
+      messageEl.innerHTML = `Player, start a new game`;
+      playerEl.innerHTML = `Player's total score is ${totalScore}`;
+      totalScore = 0;
+      roundNumber = 1;
+   }
 }
