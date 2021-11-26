@@ -3,25 +3,24 @@
 const cardsEl = document.querySelector('#cards-el');
 const startBtn = document.querySelector('#start-btn');
 const saveBtn = document.querySelector('#save-btn');
+const messageEl = document.querySelector('#message-el');
 
-let firstCard;
-let secondCard;
 let sum;
+let roundNumber = 1;
 
 startBtn.addEventListener('click', startNewGame);
 saveBtn.addEventListener('click', renderResults);
 document.querySelector('#new-card-btn').addEventListener('click', getNewCard);
 
 function startNewGame() {
-   getFirstCards();
+   let firstCard = getRandom();
+   let secondCard = getRandom();
    cardsEl.innerHTML = `Cards: ${firstCard}, ${secondCard}`;
    sum = firstCard + secondCard;
    renderSum();
    showMessage();
 
-   startBtn.style.display = "none";
-   saveBtn.style.display = "block";
-
+   toggleBtns(startBtn, saveBtn);
 }
 
 function getNewCard() {
@@ -32,11 +31,6 @@ function getNewCard() {
       renderSum();
       showMessage();   
    }
-}
-
-function getFirstCards() { 
-   firstCard = getRandom();
-   secondCard = getRandom();
 }
 
 function getRandom() {
@@ -55,7 +49,6 @@ function renderSum() {
 }
 
 function showMessage() {
-   const messageEl = document.querySelector('#message-el');
    if (sum < 21) {
       messageEl.innerHTML = "Feel like a new card?"
    } else if (sum > 21) {
@@ -66,11 +59,30 @@ function showMessage() {
 }
 
 function renderResults() {
-   let playerResultsArr = [];
-   playerResultsArr.push(sum);
-   console.log(playerResultsArr);
-
-   saveBtn.style.display = "none";
-   startBtn.style.display = "block";
+   const playerEl = document.querySelector('#player-el');
+   toggleBtns(saveBtn, startBtn);
+   playerEl.innerHTML += ` ${calcResult()}`;
+   showRoundNumber();
 }
 
+function calcResult() {
+   let playerResults = 0;
+   if (sum === 21) {
+      playerResults = 31;
+   } else if (sum > 21) {
+      playerResults = 0;
+   } else {
+      playerResults = sum;
+   }
+   return playerResults;
+}
+
+function toggleBtns(none, block) {
+   none.style.display = "none";
+   block.style.display = "block";
+}
+
+function showRoundNumber() {
+   roundNumber++;
+   messageEl.innerHTML = `Player, start round ${roundNumber}`
+}
