@@ -28,16 +28,14 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 
 ### What I learned
 
-1) the Utility Classes "gap" property to use between flex and grid elements (html customizable variable)
+#### Blackjack game
 
-```css
-.flex {
-   display: flex;
-   gap: var(--gap, 1.6rem);
-}
-.grid {
-   display: grid;
-   gap: var(--gap, 1.6rem);
+1) An easy way to toggle buttons passing arguments
+
+```js
+function toggleBtns(none, block) {
+   none.style.display = "none";
+   block.style.display = "block";
 }
 ```
 
