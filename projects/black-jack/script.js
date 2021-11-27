@@ -10,6 +10,9 @@ let sum;
 let roundNumber = 1;
 let totalScore = 0;
 
+let player1Turn = true;
+let player2Turn = false;
+
 startBtn.addEventListener('click', startNewGame);
 saveBtn.addEventListener('click', renderResults);
 document.querySelector('#new-card-btn').addEventListener('click', getNewCard);
@@ -24,7 +27,7 @@ function startNewGame() {
 
    toggleBtns(startBtn, saveBtn);
    if (roundNumber === 1) {
-      playerEl.innerHTML = "Player:";
+      playerEl.innerHTML = "Points:";
    }
 }
 
@@ -92,10 +95,26 @@ function toggleBtns(none, block) {
 function showRoundNumber() {
    roundNumber++;
    messageEl.innerHTML = `Player, start round ${roundNumber}`;
-   if (roundNumber > 3) {
-      messageEl.innerHTML = `Player, start a new game`;
-      playerEl.innerHTML = `Player's total score is ${totalScore}`;
-      totalScore = 0;
-      roundNumber = 1;
+   trackRoundNumber();
+}
+
+function trackRoundNumber() {
+   if (roundNumber > 3 && player1Turn) {
+      unsetRound('Player 2', 'Player 1');
+      player2Turn = true;
+      player1Turn = false;
+   } else if (roundNumber > 3 && player2Turn) {
+      unsetRound('Player 1', 'Player 2');
+      player1Turn = true;
+      player2Turn = false;
    }
 }
+
+function unsetRound(newPlayer, oldPlayer) { 
+   messageEl.innerHTML = `${newPlayer}, start a new game`;
+   playerEl.innerHTML = `${oldPlayer} total score is ${totalScore}`;
+   totalScore = 0;
+   roundNumber = 1;
+}
+
+
