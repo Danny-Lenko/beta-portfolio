@@ -9,6 +9,11 @@ const playerEl = document.querySelector('#player-el');
 let sum;
 let roundNumber = 1;
 let totalScore = 0;
+let player1Turn = true;
+let player2Turn = false;
+let player1Score;
+let player2Score;
+
 
 startBtn.addEventListener('click', startNewGame);
 saveBtn.addEventListener('click', renderResults);
@@ -17,14 +22,14 @@ document.querySelector('#new-card-btn').addEventListener('click', getNewCard);
 function startNewGame() {
    let firstCard = getRandom();
    let secondCard = getRandom();
+
    cardsEl.innerHTML = `Cards: ${firstCard}, ${secondCard}`;
    sum = firstCard + secondCard;
    renderSum();
    showMessage();
-
    toggleBtns(startBtn, saveBtn);
    if (roundNumber === 1) {
-      playerEl.innerHTML = "Player:";
+      playerEl.innerHTML = "Points:";
    }
 }
 
@@ -92,10 +97,39 @@ function toggleBtns(none, block) {
 function showRoundNumber() {
    roundNumber++;
    messageEl.innerHTML = `Player, start round ${roundNumber}`;
-   if (roundNumber > 3) {
-      messageEl.innerHTML = `Player, start a new game`;
-      playerEl.innerHTML = `Player's total score is ${totalScore}`;
-      totalScore = 0;
-      roundNumber = 1;
+   trackRoundResults();
+}
+
+function trackRoundResults() {
+   if (roundNumber > 3 && player1Turn) {
+      player1Score = totalScore;
+      unsetRound('Player 2', 'Player 1');
+      player2Turn = true;
+      player1Turn = false;
+   } else if (roundNumber > 3 && player2Turn) {
+      player2Score = totalScore;
+      unsetRound('Player 1', 'Player 2');
+      player1Turn = true;
+      player2Turn = false;
+      chooseWinner(player1Score, player2Score);
    }
 }
+
+function unsetRound(newPlayer, oldPlayer) { 
+   messageEl.innerHTML = `${newPlayer}, start a new game`;
+   playerEl.innerHTML = `${oldPlayer} total score is ${totalScore}`;
+   totalScore = 0;
+   roundNumber = 1;
+}
+
+function chooseWinner(player1, player2) {
+   const gameResultEl = document.querySelector('#game-result-el');
+   if (player1 > player2) {
+      gameResultEl.innerHTML = `Player 1 wins ${player1} - ${player2}`;
+   } else {
+      gameResultEl.innerHTML = `Player 2 wins ${player1} - ${player2}`;
+   }
+}
+
+
+
