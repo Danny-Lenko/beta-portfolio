@@ -13,6 +13,9 @@ let player1Turn = true;
 let player2Turn = false;
 let player1Score;
 let player2Score;
+let gameNumber = 1;
+let player1Wins = 0;
+let player2Wins = 0;
 
 
 startBtn.addEventListener('click', startNewGame);
@@ -123,11 +126,32 @@ function unsetRound(newPlayer, oldPlayer) {
 }
 
 function chooseWinner(player1, player2) {
-   const gameResultEl = document.querySelector('#game-result-el');
    if (player1 > player2) {
-      gameResultEl.innerHTML = `Player 1 wins ${player1} - ${player2}`;
+      playerEl.innerHTML = `Player 1 wins ${player1} - ${player2}`;
+      player1Wins++;
+      gameNumber++
    } else {
-      gameResultEl.innerHTML = `Player 2 wins ${player1} - ${player2}`;
+      playerEl.innerHTML = `Player 2 wins ${player1} - ${player2}`;
+      player2Wins++;
+      gameNumber++;
+   }
+   trackGameNumber();
+}
+
+function trackGameNumber() {
+   const gameResultEl = document.querySelector('#game-result-el');
+   if (gameNumber === 2) {
+      gameResultEl.innerHTML = `Game # 2`;
+   } else if (gameNumber === 3 && player1Wins === 2) {
+      gameResultEl.innerHTML = `Player 1 wins. Congrats!`;
+   } else if (gameNumber === 3 && player2Wins === 2) {
+      gameResultEl.innerHTML = `Player 2 wins. Congrats!`;
+   } else if (gameNumber === 4 && player1Wins === 2) {
+      gameResultEl.innerHTML = `Player 1 wins. Congrats!`;
+   } else if (gameNumber === 4 && player2Wins === 2) {
+      gameResultEl.innerHTML = `Player 2 wins. Congrats!`;
+   } else if (gameNumber === 3 && player2Wins === 1) {
+      gameResultEl.innerHTML = `Game # 3`;
    }
 }
 
