@@ -5,6 +5,7 @@ const startBtn = document.querySelector('#start-btn');
 const saveBtn = document.querySelector('#save-btn');
 const messageEl = document.querySelector('#message-el');
 const playerEl = document.querySelector('#player-el');
+const gameResultEl = document.querySelector('#game-result-el');
 
 let sum;
 let roundNumber = 1;
@@ -16,6 +17,7 @@ let player2Score;
 let gameNumber = 1;
 let player1Wins = 0;
 let player2Wins = 0;
+let gameOver = false;
 
 
 startBtn.addEventListener('click', startNewGame);
@@ -33,6 +35,10 @@ function startNewGame() {
    toggleBtns(startBtn, saveBtn);
    if (roundNumber === 1) {
       playerEl.innerHTML = "Points:";
+   }
+   if (gameOver) {
+      deleteResults();
+      gameResultEl.innerHTML = `Game # 1`;
    }
 }
 
@@ -139,20 +145,30 @@ function chooseWinner(player1, player2) {
 }
 
 function trackGameNumber() {
-   const gameResultEl = document.querySelector('#game-result-el');
    if (gameNumber === 2) {
       gameResultEl.innerHTML = `Game # 2`;
    } else if (gameNumber === 3 && player1Wins === 2) {
       gameResultEl.innerHTML = `Player 1 wins. Congrats!`;
+      gameOver = true;
    } else if (gameNumber === 3 && player2Wins === 2) {
       gameResultEl.innerHTML = `Player 2 wins. Congrats!`;
+      gameOver = true;
    } else if (gameNumber === 4 && player1Wins === 2) {
       gameResultEl.innerHTML = `Player 1 wins. Congrats!`;
+      gameOver = true;
    } else if (gameNumber === 4 && player2Wins === 2) {
       gameResultEl.innerHTML = `Player 2 wins. Congrats!`;
+      gameOver = true;
    } else if (gameNumber === 3 && player2Wins === 1) {
       gameResultEl.innerHTML = `Game # 3`;
    }
+}
+
+function deleteResults() {
+   gameNumber = 1;
+   player1Wins = 0;
+   player2Wins = 0;
+   gameOver = false;
 }
 
 
