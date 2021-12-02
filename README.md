@@ -31,6 +31,7 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 #### The Welcome Page
 
 1) make a hidden attribute work
+
 ```css
 [hidden] {display: none !important;}
 ```
@@ -47,6 +48,7 @@ function toggleBtns(none, block) {
 ```
 
 2) the .flow class to add space on top of children
+
 ```html
 <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
 </div>
@@ -57,7 +59,15 @@ function toggleBtns(none, block) {
 }
 ```
 
-####
+#### Emoji Personality
+1) an easy method to fetch value from an input field
+
+```js
+document.getElementById('textbox_id').value;
+// For example
+document.getElementById("searchTxt").value;
+```
+
 
 
 ### Continued development
@@ -75,9 +85,9 @@ function toggleBtns(none, block) {
 
 ### Useful resources
 
+- [Stack Overflow](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
+- [Align vertically (rus)](https://ruseller.com/lessons.php?id=1248) - The article gives 6 methods to vertically align with css.
 - [Grid Attack](https://codingfantasy.com) - This helped me practice CSS GRID. Challenging and interactive game aimed at learning the css grid properties' application.
-- [Glassmorphism Generator](https://hype4.academy/tools/glassmorphism-generator) - This may be handy if you need to apply the glassmorphism effect. Except the generator, they have articles on this topic.
-- [Attribute Selection](https://stackoverflow.com/questions/64312576/how-to-select-an-element-with-attribute-role) - the first answer in article contains the syntax of DOM attribute selection as well as the link to the detailed article on MDN Web Docs.
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
 - [The Markdown Guide](https://www.markdownguide.org/) - for more help with writing markdown (Article).
