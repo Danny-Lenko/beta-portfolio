@@ -1,0 +1,37 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+    <div class="content-wrapper">
+        <h1>Choose Your Emojis</h1>   
+        <div id="emoji-container"></div>
+        <div class="interaction flex">
+            <div class="interaction__box">
+                <button id="unshift-btn" class="round-btn">+</button>
+                <button id="shift-btn" class="round-btn">-</button>
+            </div>
+            <div class="interaction__box">
+                <input type="text" id="emoji-input" placeholder="type an emoji 🎉">
+            </div>
+            <div class="interaction__box">
+                <button id="push-btn" class="round-btn">+</button>
+                <button id="pop-btn" class="round-btn">-</button>
+            </div> 
+        </div>
+        <div class="random-basic flex">
+            <button id="happy-btn" class="random-btn">happy</button>
+            <button id="emotion-btn" class="random-btn">emotional</button>
+        </div>
+        <div class="random-activity flex">
+            <button id="sports-btn" class="random-btn">sports</button>
+            <button id="work-btn" class="random-btn">work</button>
+        </div>
+        <div class="random-dayoff flex">
+            <button id="dayoff-btn" class="random-btn">day off</button>
+        </div>
+    </div>
+    </body>
+</html>

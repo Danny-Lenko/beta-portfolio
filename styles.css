@@ -12,6 +12,9 @@ body {
    margin: 0;
    line-height: 1.4;
 }
+
+[hidden] {display: none !important;}
+
 header {
    background-color: #be3144;
    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
@@ -151,19 +154,19 @@ a {
 .code {
    color: #303841;
    transition: color 0.3s ease-out;
- }
+}
  
- .project-tile:hover .code,
- .project-tile:focus .code {
-   color: #ff7f50;
- }
+.project-tile:hover .code,
+.project-tile:focus .code {
+color: #ff7f50;
+}
 
 .img-d > img {
    width: 100%;
    object-fit: cover;
 }
 
- .btn {
+.btn {
    color:rgba(240, 240, 240, 0.85);
    display: block;
    padding: 0.5em 1em;
@@ -171,17 +174,18 @@ a {
    width: 200px;
    text-align: center;
    margin: 0 auto;
- }
- 
- .btn-show-all {
+}
+
+.btn-show-all {
    font-size: 1.3rem;
    background: #303841;
    transition: background 0.3s ease-out;
- }
- 
- .btn-show-all:hover {
+   border: 0;
+}
+
+.btn-show-all:hover {
    background: rgb(190, 49, 68);
- }
+}
 
 @media(min-width:950px) {
    .projects-flex {
