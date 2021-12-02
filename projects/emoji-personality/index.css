@@ -1,0 +1,121 @@
+html {
+    font-family: Baloo;
+}
+
+body {
+    padding: 10px;
+    background-image: linear-gradient(#9393CB, #EBDDB3);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.content-wrapper {
+    border: 1px solid rgb(95, 95, 150);
+    border-radius: 25px;
+    max-width: 600px;
+    margin: 10vh auto;
+    background-color: rgb(95, 95, 150);
+}
+
+.flex {
+    display: flex;
+}
+
+#emoji-container {
+    margin: 0 auto 20px;
+    text-align: center;
+    border: 3px dotted #89ABC4;
+    padding: 15px 10px;
+    max-width: 400px;
+    border-radius: 12px;
+    min-height: 60px;
+    font-size: 50px;
+}
+
+#push-btn,#unshift-btn {
+    background-color: #D6BF7A;
+
+}
+
+#shift-btn,#pop-btn {
+    background-color: #391D5F;
+    color: #EBDDB3;
+}
+
+h1 {
+    letter-spacing: 2px;
+    text-align: center;
+    color: #D6CE7A;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    height: 65px;
+    background: #A2A2CB;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 150px;
+}
+
+.round-btn {
+    font-family: Baloo;
+    font-size: larger;
+    background: darkcyan;
+    color: black;
+    border: none;
+    padding: 0 12px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 2px 4px 2px;
+    line-height: 30px;
+}
+
+.interaction {
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.interaction__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.random-activity,
+.random-basic,
+.random-dayoff {
+    margin: 1em auto 0;
+    justify-content: space-between;
+}
+
+.random-basic {
+    width: 70%;
+}
+.random-activity {
+    width: 45%;
+}
+.random-dayoff {
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.random-btn {
+    line-height: 38px;
+    width: 100px;
+    height: 35px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+}
+
