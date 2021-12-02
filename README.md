@@ -28,6 +28,13 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 
 ### What I learned
 
+#### The Welcome Page
+
+1) make a hidden attribute work
+```css
+[hidden] {display: none !important;}
+```
+
 #### Blackjack game
 
 1) An easy way to toggle buttons passing arguments
@@ -49,6 +56,8 @@ function toggleBtns(none, block) {
   margin-top: var(--flow-space, 1rem);
 }
 ```
+
+####
 
 
 ### Continued development
