@@ -51,3 +51,38 @@ let model = {
       return true;
    }
 };
+
+let controller = {
+   guesses: 0,
+
+   processGuess: function(guess) {
+      let location = parseGuess(guess);
+      if (location) {
+         this.guesses++;
+         model.fire(location);
+      }
+   }
+};
+
+function parseGuess(guess) {
+   let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+   if (guess === null || guess.length !== 2) {
+      alert("Oops, enter a letter and a number on the board");
+   } else {
+      let firstLetter = guess.charAt(0);
+      let row = alphabet.indexOf(firstLetter);
+      let col = guess.charAt(1);
+
+      if (isNaN(row) || isNaN(col)) {
+         alert("Oops, that's not on the board");
+      } else if (row < 0 || row >= model.boardSize 
+              || col < 0 || col >= model.boardSize) {
+         alert("Oops, that's off the board");
+      } else {
+         return row + col;
+      }
+   }
+   return null;
+}
+
