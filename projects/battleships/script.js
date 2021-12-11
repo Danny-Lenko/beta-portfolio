@@ -49,6 +49,51 @@ let model = {
       this.shipsSunk++;
       view.displayMessage('You sank my battleship!');
       return true;
+   },
+
+   generateShipsLocations: function() {
+      let locations;
+      for (let i = 0; i < this.shipsNum; i++) {
+         do {
+            locations = this.generateShip();
+         } while(this.collision(locations));
+         this.ships[i].locations = locations;
+      }
+   },
+
+   generateShip: function() {
+      let direction = Math.floor(Math.random() * 2);
+      let row, col;
+      let newShipLocations = [];
+
+      if (direction === 1) {
+         row = Math.floor( Math.random() * this.boardSize );
+         col = Math.floor( Math.random() * (this.boardSize - this.shipSize) );
+      } else {
+         row = Math.floor( Math.random() * (this.boardSize - this.shipSize) );
+         col = Math.floor( Math.random() * this.boardSize );
+      }
+
+      for (let i = 0; i < this.shipSize; i++) {
+         if (direction === 1) {
+            newShipLocations.push(row + '' + (col + i));
+         } else {
+            newShipLocations.push((row + i) + '' + col);
+         }
+      }
+      return newShipLocations;
+   },
+
+   collision: function(locations) {
+      for (let i = 0; i < this.shipsNum; i++) {
+         let ship = this.ships[i];
+         for (let j = 0; j < locations.length; j++) {
+            if (ship.locations.indexOf(locations[j]) >= 0) {
+               return true;
+            }
+         }
+      }
+      return false;
    }
 };
 
@@ -61,7 +106,7 @@ let controller = {
          this.guesses++;
          model.fire(location);
          if (model.shipsSunk === model.shipsNum) {
-            view.displayMessage("You've sunk all my battleships!");
+            view.displayMessage("You've sunk all my battleships in " + this.guesses + " guesses");
          }
       }
    }
@@ -92,6 +137,7 @@ function parseGuess(guess) {
 function init() {
    document.querySelector('#fireButton').addEventListener('click', handleClick);
    document.querySelector('#guessInput').addEventListener('keyup', handleEnterPress);
+   model.generateShipsLocations();
 }
 window.onload = init;
 
