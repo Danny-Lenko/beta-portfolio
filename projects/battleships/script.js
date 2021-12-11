@@ -60,6 +60,9 @@ let controller = {
       if (location) {
          this.guesses++;
          model.fire(location);
+         if (model.shipsSunk === model.shipsNum) {
+            view.displayMessage("You've sunk all my battleships!");
+         }
       }
    }
 };
@@ -86,3 +89,23 @@ function parseGuess(guess) {
    return null;
 }
 
+function init() {
+   document.querySelector('#fireButton').addEventListener('click', handleClick);
+   document.querySelector('#guessInput').addEventListener('keyup', handleEnterPress);
+}
+window.onload = init;
+
+function handleClick() {
+   const guessInput = document.querySelector('#guessInput');
+   const inputValue = guessInput.value;
+   controller.processGuess(inputValue);
+   guessInput.value = '';
+}
+
+function handleEnterPress(e) {
+   const fireButton = document.querySelector('#fireButton');
+   if (e.key === "Enter") {
+      fireButton.click();
+      return false;   
+   }
+}
