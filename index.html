@@ -4,11 +4,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Small Projects Beta Portfolio</title>
+   <title>Small Projects Portfolio</title>
    <link rel="stylesheet" href="styles.css">
 
    <script src="script.js" defer></script>
-   <script src="modal.js" defer></script>
+   <!-- <script src="modal.js" defer></script> -->
 </head>
 
 <body>
@@ -24,7 +24,7 @@
       </div>
    </header>
 
-   <div class="modal-overlay">
+   <div class="modal-overlay" hidden>
       <div class="modal-overlay__content">
          <p class="modal__warning">warning!</p>
          <p style="line-height: 1;">This is the small porfolio for small projects<br><span>(built for study purposes mostly)</span></p>
@@ -44,8 +44,9 @@
       </section> <!-- end of welcome-section -->
 
       <section id="projects"> <!-- begin of projects section -->
+         <h2>These are some of my projects</h2>
+
          <div class="container">
-            <h2>These are some of my projects</h2>
             <div class="projects-flex">
 
                <div class="project-tile">
@@ -169,9 +170,9 @@
 
 
             </div>
-         
             <button id="showAllBtn" class="btn btn-show-all">Show all</button>
-         <!-- <a href="#" id="showAllBtn" class="btn btn-show-all" target="_blank">Show all</a> -->
+
+         </div>
       </section>   <!-- end of projects section -->
 
       <section id="contact" class="contact-section">
