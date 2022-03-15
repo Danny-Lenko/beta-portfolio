@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Small Projects Portfolio</title>
+   <link rel="stylesheet" href="styles.css">
+
+   <script src="script.js" defer></script>
+   <!-- <script src="modal.js" defer></script> -->
+</head>
+
+<body>
+   <header>
+      <div class="container flex flex-end">
+         <nav id="navbar">
+            <ul class="flex">
+               <li><a href="#welcome-section">About</a></li>
+               <li><a href="#projects">Work</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>   
+      </div>
+   </header>
+
+   <div class="modal-overlay" hidden>
+      <div class="modal-overlay__content">
+         <p class="modal__warning">warning!</p>
+         <p style="line-height: 1;">This is the small porfolio for small projects<br><span>(built for study purposes mostly)</span></p>
+         <p></p>
+         <p style="font-size: smaller;">A link to my main portfolio<br> is on the bottom of the page (footer)</p>
+         <button id="modalBtn">I got it</button>
+      </div>
+   </div>
+
+   <main>
+
+      <section id="welcome-section">
+         <div class="container flex">
+            <h1>Hi, my name is Danny</h1>
+            <p>a web developer</p>
+         </div>
+      </section> <!-- end of welcome-section -->
+
+      <section id="projects"> <!-- begin of projects section -->
+         <h2>These are some of my projects</h2>
+
+         <div class="container">
+            <div class="projects-flex">
+
+               <div class="project-tile">
+                  <a href="projects/bbq-regist/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/bbq-regist.png" alt="registration form">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Registration Form
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div class="project-tile">
+                  <a href="projects/black-jack/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/blackjack.png" alt="blackjack game">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           BlackJack
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div class="project-tile">
+                  <a href="projects/roll-dice/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/roll-dice.png" alt="roll dice game">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Roll Dice Game
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div class="project-tile">
+                  <a href="projects/minimalism/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/simple-life.png" alt="minimalism blog">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Minimalism Blog
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div class="project-tile">
+                  <a href="projects/emoji-personality/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/emoji-personality.png" alt="choose emoji app">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Your Emoji Personality
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div class="project-tile">
+                  <a href="projects/seeds-landing/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/product-landing.png" alt="product-landing">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Product Landing
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <!-- hidden projects -->
+
+               <div hidden class="project-tile hidden1"> 
+                  <a href="projects/battleships/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/battleship.png" alt="battleship game">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Battleship Game
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div hidden class="project-tile hidden1"> 
+                  <a href="projects/leads-tracker/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/extension.png" alt="leads tracker">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Chrome Extension
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+               <div hidden class="project-tile hidden1"> 
+                  <a href="projects/auto-selection/index.html" target="blank">
+                     <div class="img-d">
+                        <img src="img/Survey-img.png" alt="survey form">
+                     </div>
+                     <p>
+                        <span class="code">&lt;</span>
+                           Survey Form
+                        <span class="code">&#47;&gt;</span>
+                     </p>
+                  </a>
+               </div>
+
+
+            </div>
+            <button id="showAllBtn" class="btn btn-show-all">Show all</button>
+
+         </div>
+      </section>   <!-- end of projects section -->
+
+      <section id="contact" class="contact-section">
+         <div class="contact-section-header">
+           <h2>Let's work together...</h2>
+           <p>How do you take your coffee?</p>
+         </div>
+         <div class="contact-links">
+            <a href="#" target="_blank" class="btn contact-details">Facebook</a>
+            <a id="profile-link" href="#" target="_blank" class="btn contact-details">GitHub</a>
+            <a href="#" target="_blank" class="btn contact-details">Twitter</a>
+            <a href="#" class="btn contact-details">Send a mail</a>
+            <a href="tel:555-555-5555" class="btn contact-details">Call me</a>
+         </div>
+      </section>  
+
+   </main>
+
+   <footer>
+      <p>© Initially created for <a href="#">freeCodeCamp</a> certification</p>
+   </footer>
+
+</body>
+</html>
