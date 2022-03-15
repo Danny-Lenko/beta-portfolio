@@ -54,8 +54,6 @@ body {
          color: rgba(240, 240, 240, .85);
       }
    }
-
-
 }
 
 @media (max-width: 620px) {
@@ -71,7 +69,7 @@ body {
       }
    }
 } 
-// ================================== welcome section
+// ====================================== welcome section
 
 .welcome {
    flex-direction: column;
@@ -192,6 +190,95 @@ body {
       padding: 0 .5em;
    }
 }
+
+// ======================================= contact section
+
+.contact {
+   color: #f0f0f0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   height: 80vh;
+   background: #303841;
+
+   &__heading {
+      font-size: 4rem;
+      margin-bottom: 0;
+      border: 0;
+   }
+
+   &__subheading {
+      font-style: italic;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 200;
+      margin-bottom: 1em;
+   }
+
+   &__links {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 980px;
+      margin-top: 2em;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+   }
+
+   &__details {
+      color:rgba(240, 240, 240, 0.85);
+      display: block;
+      padding: 0.5em 1em;
+      border-radius: 2px;
+      width: 200px;
+      text-align: center;
+      margin: 0 auto;
+
+      text-decoration: none;
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 1px #1f1f1f;
+      transition: transform 0.3s ease-out;
+      padding: 0 1em;
+      margin: 0;
+      width: fit-content;
+   }
+   &__details:hover {
+      transform: translateY(8px);
+   }
+}
+
+@media (max-width: 400px) {
+   .contact__heading {
+      font-size: 3rem;
+   }
+}
+
+// =================================== footer
+
+.footer {
+   font-weight: 300;
+   display: flex;
+   justify-content: flex-end;
+   padding: 2rem;
+   background: #303841;
+   border-top: 4px solid rgb(190, 49, 68);
+
+   &__text {
+      color: rgba(240, 240, 240, 0.85);
+      margin: 0;
+      margin-right: 2em;
+      font-size: 1.2rem;
+   }
+
+   &__link {
+      color: rgba(240, 240, 240, 0.85);
+   }
+}
+
 
 
 

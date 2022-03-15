@@ -226,11 +226,7 @@ color: #ff7f50;
    border: 0;
 }
 
-@media (max-width: 400px) {
-   .contact-section-header h2 {
-      font-size: 3rem;
-   }
-}
+c
 
 .contact-section-header p {
    font-style: italic;
