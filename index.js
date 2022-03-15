@@ -8,7 +8,7 @@ async function getAllProjects(val) {
 
 function getProjectHtml(aProject) {
    return `
-      <div class="projects__tile">
+      <div class="projects__item">
          <a href="projects/${aProject.address}/index.html" target="blank">
             <div class="projects__img-div">
                <img src="projects/${aProject.address}/portfolio.png" alt="">

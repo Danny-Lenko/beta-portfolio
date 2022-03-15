@@ -22,7 +22,7 @@ body {
    width: 100%;
 
    &__logo {
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 1;
       color: black;
    }
@@ -70,10 +70,10 @@ body {
          padding: .8em .8em;
       }
    }
-   
+} 
 // ================================== welcome section
 
-}.welcome {
+.welcome {
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -85,6 +85,7 @@ body {
 
    &__heading {
       font-size: 3rem;
+      padding: 0 .2em
    }
 
    &__subheading {
@@ -92,25 +93,107 @@ body {
       font-weight: 200;
       font-size: 2rem;
       color: rgb(190, 49, 68);
-      font-style: italic;   
+      font-style: italic;
+      padding: 0 .4em;
    }
 }
 
 // ===================================== projects section
 
 .projects {
+   background: #45567d;
+   padding-bottom: 3em;
+   
+   a {
+      text-decoration: none;
+   }
 
    &__heading {
+      text-align: center;
+      color: rgba(240, 240, 240, 0.85);
+      font-size: 2.5rem;
+      border-bottom: 0.15rem solid rgba(240, 240, 240, 0.85);
+      max-width: 650px;
+      padding-top: 1.5em;
+      margin: 0 auto 2em;
    }
 
    &__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       grid-gap: 2em;
+      max-width: 1500px;
+      margin: 0 auto;
+   }
+
+   &__item {
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   }
+
+   &__img-div{
+      height: 200px;
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__title {
+      color: rgba(240, 240, 240, 0.85);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin: 0;
+      line-height: normal;
+      font-size: 1.2rem;
+      padding: 3% 0;
+      background: #303841;
+   }
+
+   .code {
+      color: #303841;
+      transition: color 0.3s ease-out;
+   }
+    
+   &__item:hover .code,
+   &__item:focus .code {
+      color: #ff7f50;
    }
 
    &__btn-more {
+      font-family: 'Poppins', sans-serif;
+      color:rgba(240, 240, 240, 0.85);
+      display: block;
+      padding: 0.5em 1em;
+      border-radius: 2px;
+      width: 200px;
+      text-align: center;
+      margin: 2em auto 0;
+
+      font-size: 1.3rem;
+      background: #303841;
+      transition: background 0.3s ease-out;
+      border: 0;
+      cursor: pointer;
+   }
+   &__btn-more:hover {
+      background: rgb(190, 49, 68);
    }
 }
+
+@media (max-width: 450px) {
+   .projects__grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 1em;
+   }
+   .projects.container {
+      padding: 0 .5em;
+   }
+}
+
+
+
 
 
