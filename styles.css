@@ -111,4 +111,12 @@ body {
   color: #be3144;
   font-style: italic;
 }
+
+.projects__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+}
 /*# sourceMappingURL=styles.css.map */

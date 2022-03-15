@@ -71,7 +71,7 @@ body {
       }
    }
    
-// ================================ welcome section
+// ================================== welcome section
 
 }.welcome {
    flex-direction: column;
@@ -96,5 +96,21 @@ body {
    }
 }
 
+// ===================================== projects section
+
+.projects {
+
+   &__heading {
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 2em;
+   }
+
+   &__btn-more {
+   }
+}
 
 
