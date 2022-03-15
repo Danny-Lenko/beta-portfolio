@@ -1,5 +1,7 @@
+
 body {
-   color: red;
+   font-family: 'Raleway', sans-serif;
+   line-height: 1.4;
 }
 
 .container {
@@ -11,12 +13,60 @@ body {
 
 .header {
    background-color: #be3144;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+
    &__logo {
+      font-size: 2rem;
+      line-height: 1;
+      color: black;
    }
 
    &__nav {
    }
 
    &__ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+      li {
+         padding: .8em 1em;
+         font-size: 1.4rem;
+         transition: background .3s ease-out;
+      }
+      li:hover {
+         background: #45567d;
+      }
+      a {
+         text-decoration: none;
+         color: black;
+         font-weight: bold;
+         cursor: pointer;
+         transition: color .3s ease-out;
+      }
+      a:hover {
+         color: rgba(240, 240, 240, .85);
+      }
    }
+
+
+}
+
+@media (max-width: 620px) {
+   .header {
+      flex-direction: column;
+      justify-content: center;
+      
+      &__logo {
+         padding-top: .5em;
+      }
+      li {
+         padding: .8em .8em;
+      }
+   }
+   .header.container {
+      padding: 0;
+   }
+   
 }
