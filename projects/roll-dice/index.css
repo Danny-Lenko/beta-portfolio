@@ -7,31 +7,52 @@ html, body {
     margin: 0;
     padding: 0;
 }
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
 
 body {
-    padding-top: 50px;
+    padding-top: 10px;
     background-image: linear-gradient(135deg, var(--color-1) , var(--color-2));
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     color: black;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 .container {
-    width: 400px;
+    min-width: 400px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 15%;
     background-color: white;
     box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
     padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
-.players {
-    width: 100%;
+.players,
+.draw__players {
     display: flex;
     justify-content: space-around;
 }
 
-.dice {
+.playerEl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dice,
+.draw__dice {
     border-radius: 10px;
     width: 100px;
     height: 100px;
@@ -43,22 +64,30 @@ body {
     justify-content: center;
 }
 
+.dice-wrapper {
+    border-radius: 10px;
+    background-color: var(--color-3);
+    width: 100px;
+    display: block;
+}
 
 button {
     color: #fff;
     padding: 20px 30px;
     font-size: 20px;
-    margin: 40px auto;
+    margin: 40px auto 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#rollBtn {
+#rollBtn,
+#drawRoll {
     background-color: var(--color-5);
 }
 
-#resetBtn {
+#resetBtn,
+#drawClose {
     background-color: var(--color-4);
 }
 
@@ -66,10 +95,89 @@ button:focus {
     outline: none;
 }
 
-#resetBtn {
+#resetBtn,
+#drawClose {
     display: none;
 }
 
 .active {
     box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+}
+
+[role="active"] {
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+}
+
+.overlay {
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(23, 32, 42, 0.7);
+    display: flex;
+    justify-content: center;
+}
+
+.overlay__content {
+    margin-top: 70px;
+    width: 70%;
+    height: 60%;
+    background: var(--color-3);
+    text-align: center;
+}
+
+.overlay__h2 {
+    margin-top: 100px;
+}
+
+.overlay__btn {
+    margin: 50px 25px;
+    background: var(--color-5);
+}
+
+/* ======
+    draw overlay styling 
+====== */
+
+.draw {
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(23, 32, 42, 0.7);
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.draw__content {
+    margin-top: 50px;
+    width: 70%;
+    height: 70%;
+    background: var(--color-2);
+    text-align: center;
+}
+
+.shake {
+    animation: shake .5s infinite;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(8deg);
+    }
+    50% {
+        transform: rotate(-8deg);
+    }
+    100% {
+        transform: rotate(8deg);
+    }
+}
+.scoreboard {
+    display: block;
+}
+
+.playerEl h2 {
+    margin: 1rem auto;
 }

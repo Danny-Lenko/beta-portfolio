@@ -1,14 +1,14 @@
 [{
+  "name": "Roll Dice Game",
+  "address": "roll-dice"
+},
+{
    "name": "Registration Form",
    "address": "bbq-regist"
  },
  {
    "name": "BlackJack",
    "address": "black-jack"
- },
- {
-   "name": "Roll Dice Game",
-   "address": "roll-dice"
  },
  {
    "name": "Minimalism Blog",
@@ -21,5 +21,17 @@
  {
    "name": "Product Landing",
    "address": "seeds-landing"
+ },
+ {
+   "name": "Battleship Game",
+   "address": "battleships"
+  },
+ {
+   "name": "Chrome Extension",
+   "address": "leads-tracker"
+ },
+ {
+   "name": "Survey Form",
+   "address": "auto-selection"
  }
 ]

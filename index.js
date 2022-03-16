@@ -30,6 +30,10 @@ function displayProjects(allProjects) {
 
 getAllProjects(6).then(displayProjects);
 
+document.querySelector('#btnMore').addEventListener('click', () => {
+   getAllProjects(9).then(displayProjects);
+})
+
 
 
 
