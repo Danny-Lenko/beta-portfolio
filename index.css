@@ -80,6 +80,9 @@ select {
 /* ========= end of reset settings =========== */
 
 [hidden] {display: none !important;}
+html {
+  scroll-behavior: smooth;
+}
 
 
 
