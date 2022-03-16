@@ -1,0 +1,42 @@
+.general {
+   display: flex;
+   flex-direction: column;
+   max-width: 400px;
+   margin: 10vh auto;
+}
+
+.pictures {
+   img {
+      height: 100%;
+      width: 100%;
+   }
+
+		&__grid-area {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-gap: 5px;
+		}
+
+		&__green {
+         background-color: green;
+		}
+
+      &__image {
+         display: none;
+      }
+
+      &__green,
+      &__image {
+         height: 125px;
+      }
+}
+
+.info {
+
+   &__score,
+   &__failed {
+      margin-top: 1em;
+      line-height: 1;
+   }
+}
+
