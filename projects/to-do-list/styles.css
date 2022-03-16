@@ -1,0 +1,57 @@
+body {
+  background-color: #f5f9ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.white-wrapper {
+  max-width: 65vw;
+  padding: 2rem 0;
+  margin: 0 auto;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 60px 0 rgba(103, 151, 255, 0.11), 0 12px 90px 0 rgba(103, 151, 255, 0.11);
+          box-shadow: 0 8px 60px 0 rgba(103, 151, 255, 0.11), 0 12px 90px 0 rgba(103, 151, 255, 0.11);
+  border-radius: 10px;
+  min-height: 90vh;
+}
+
+.input {
+  border: 3px solid black;
+  border-radius: 60px;
+  max-width: 57vw;
+  min-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input__h1 {
+  font-size: 3.3rem;
+  margin: .5em auto;
+}
+
+.input__inputField {
+  margin-bottom: 2em;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: #f5f9ff;
+}
+
+.output {
+  margin: 0 auto;
+  width: 60vw;
+  text-align: center;
+}
+
+.output__ul {
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=styles.css.map */

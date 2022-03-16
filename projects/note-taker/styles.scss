@@ -1,0 +1,125 @@
+.overall {
+   display: flex;
+   flex-direction: column;
+   max-width: 60vw;
+   margin: 4vh auto;
+   justify-content: center;
+   text-align: center;
+}
+.input {
+   form p {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+   form p textarea {
+      flex: 1 1 auto;
+      margin-bottom: .7em;
+      padding: .2em;
+      border: 1px solid #CDCDCD;
+   }
+   form p label {
+      padding-right: .3em;
+   }
+
+   #addBtn {
+      flex: 0;
+      background-color: green;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      padding: .5em 1em;
+      margin-bottom: 2em;
+      cursor: pointer;
+   }
+		&__h1 {
+         font-weight: 300;
+         font-size: 3rem;
+         margin-bottom: .5em;
+		}
+
+		&__subtitle {
+         color:green;
+         font-size: 1.2rem;
+         font-weight: 600;
+         margin-bottom: .6em;
+		}
+}
+.output {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   div {
+      border: 1px solid #CDCDCD;
+      min-width: 40%;
+      flex: 1 1 0;
+      margin-bottom: .5em;
+      text-align: left;
+      padding: .5em;
+      h3 {
+         font-size: 1rem;
+      }
+      p {
+         font-size: .9rem;
+      }
+      .detailBtn,
+      .delBtn {
+         font-size: .8rem;
+         color:white;
+         border: none;
+         border-radius: 2px;
+         padding: .3em .8em;
+         margin-top: 1em;
+         cursor: pointer;
+      }
+      .detailBtn {
+         background-color:#2874a6;
+      }
+      .delBtn {
+         background-color:#b03a2e;
+         margin-left: .5em;
+      }
+      
+   }
+   div:nth-child(odd) {
+      margin-left: 1em;
+   }
+
+}
+
+.overlay {
+   height: 120%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(23, 32, 42, 0.7);
+   display: none;
+   justify-content: center;
+		&__content {
+         margin-top: 25vh;
+         width: 60%;
+         height: 40%;
+         background: linen;
+         text-align: left;
+         overflow: scroll;
+         padding: .5em;
+		}
+
+		&__text {
+         font-size: 1.1rem;
+		}
+
+      &__btn {
+         background: none;
+         font-weight: bold;
+         border: none;
+         cursor: pointer;
+         display: flex;
+         width: 100%;
+      }
+      &__btn:hover {
+         background-color: #e5e5e5;
+      }
+}
+

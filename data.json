@@ -3,8 +3,16 @@
   "address": "roll-dice"
 },
 {
+  "name": "Note Taker",
+  "address": "note-taker"
+},
+{
   "name": "Expense Tracker",
   "address": "expense-tracker"
+},
+{
+  "name": "To Do List",
+  "address": "to-do-list"
 },
 {
    "name": "Registration Form",
@@ -19,6 +27,14 @@
    "address": "minimalism"
  },
  {
+  "name": "Battleship Game",
+  "address": "battleships"
+ },
+ {
+  "name": "Memory Game",
+  "address": "memory-game"
+ },
+ {
    "name": "Your Emoji Personality",
    "address": "emoji-personality"
  },
@@ -26,10 +42,6 @@
    "name": "Product Landing",
    "address": "seeds-landing"
  },
- {
-   "name": "Battleship Game",
-   "address": "battleships"
-  },
  {
    "name": "Chrome Extension",
    "address": "leads-tracker"
