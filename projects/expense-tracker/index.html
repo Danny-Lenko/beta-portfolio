@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Your Expense Tracker</title>
+   <link rel="stylesheet" href="index.css">
+   <script src="index.js" defer></script>
+</head>
+<body>
+   <div class="overall">
+      <section class="input">
+         <h1 class="input__h1">Expense Tracker</h1>
+         <p class="input__subtitle">Add A New Item:</p>
+         <form id="survey-form" action="/my-hanling-form-page" method="post">
+            <p>
+               <label id="name-label" for="name">Name:</label>
+               <input type="text" name="name" id="name" placeholder="Where was the expense made?" required>
+            </p>
+            <p>
+               <label id="date-label" for="date">Date:</label>
+               <input type="date" name="date" id="date" required>
+               <label for="amount" id="amount-label">Amount:</label>
+               <input type="number" name="amount" id="amount" required placeholder="$">
+            </p>
+            <p>
+               <input type="button" id="addBtn" value="Add Expense">
+            </p>
+         </form>
+      </section>
+      <section class="output">
+         <h2 style="display: none">here comes the table</h2>
+         <table class="output__table">
+            <thead>
+               <tr class="output__th">
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th></th>
+               </tr>   
+            </thead>
+            <tbody id="tBody">
+               <tr class="output__tr">
+                  <td class="nameCell">No expenses added yet!</td>
+                  <td class="dateCell"></td>
+                  <td class="amountCell"></td>
+                  <td class="btnCell"></td>
+               </tr>
+               <!-- <tr class="output__tr">
+                  <td class="nameCell">No expenses add yet!</td>
+                  <td class="dateCell"></td>
+                  <td class="amountCell"></td>
+                  <td class="btnCell"></td>
+               </tr> -->
+            </tbody>
+         </table>
+      </section>   
+   </div>
+</body>
+</html>

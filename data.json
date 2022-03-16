@@ -3,6 +3,10 @@
   "address": "roll-dice"
 },
 {
+  "name": "Expense Tracker",
+  "address": "expense-tracker"
+},
+{
    "name": "Registration Form",
    "address": "bbq-regist"
  },
