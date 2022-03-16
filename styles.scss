@@ -156,24 +156,50 @@ body {
       color: #ff7f50;
    }
 
-   &__btn-more {
+   &__btn-container {
+      text-align: center;
+   }
+
+   &__btn-more,
+   &__btn-hide {
       font-family: 'Poppins', sans-serif;
       color:rgba(240, 240, 240, 0.85);
-      display: block;
+      display: inline-block;
       padding: 0.5em 1em;
       border-radius: 2px;
-      width: 200px;
       text-align: center;
       margin: 2em auto 0;
-
+      text-align: center;
       font-size: 1.3rem;
-      background: #303841;
       transition: background 0.3s ease-out;
       border: 0;
       cursor: pointer;
    }
+
+   &__btn-more {
+      background: #303841;
+      width: 200px;
+   }
    &__btn-more:hover {
       background: rgb(190, 49, 68);
+   }
+
+   &__btn-hide {
+      background: rgb(190, 49, 68);
+      width: 100px;
+      display: none;
+   }
+   &__btn-hide:hover {
+      background: #303841;
+   }
+}
+
+@media (max-width: 620px) {
+   .projects__heading {
+      border: none;
+      line-height: 1;
+      margin: 2em .2em 1em;
+      padding-top: 3em;
    }
 }
 
