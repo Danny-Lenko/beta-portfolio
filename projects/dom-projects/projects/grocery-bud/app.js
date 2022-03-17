@@ -12,8 +12,10 @@
 
 // ****** EVENT LISTENERS **********
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', (e) => {
+   e.preventDefault();
    const userInput = document.querySelector('#grocery').value;
+   
    if (!userInput) {
       manageAlertMessage(`Please Enter Value`, `alert-danger`);
    } else {
@@ -132,6 +134,8 @@ const setDefaults = () => {
 
 // ****** LOCAL STORAGE **********
 window.onload = function() {
-   wishList = JSON.parse(localStorage.getItem('wishList'));
-   displayItems();
+   if (localStorage.getItem('wishList')) {
+      wishList = JSON.parse(localStorage.getItem('wishList'));
+      displayItems();
+   }
 }
