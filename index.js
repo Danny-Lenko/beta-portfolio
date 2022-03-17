@@ -46,6 +46,18 @@ btnHide.addEventListener('click', () => {
    btnHide.style.display = "none";
 })
 
+// =========================================== header behavior
+
+function fixAndUnfixNavbar() {
+   const header = document.querySelector('.header');
+   if (window.pageYOffset > 50) {
+      header.classList.add('nav-toggle');
+   } else if (window.pageYOffset < 50) {
+      header.classList.remove('nav-toggle');
+   }
+}
+window.addEventListener('scroll', fixAndUnfixNavbar);
+
 
 
 

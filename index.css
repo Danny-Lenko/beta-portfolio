@@ -84,6 +84,19 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav-toggle {
+  background-color: #be3144;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.nav-toggle li:hover {
+  background: #45567d;
+}
+
+.nav-toggle a {
+  color: black;
+}
+
 
 
 

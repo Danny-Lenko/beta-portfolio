@@ -13,12 +13,12 @@ body {
 // ======================================== header
 
 .header {
-   background-color: #be3144;
    justify-content: space-between;
    align-items: center;
-   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
    position: fixed;
    width: 100%;
+   transition: all 0.3s linear;
+   background: transparent; 
 
    &__logo {
       font-size: 1.5rem;
@@ -35,13 +35,11 @@ body {
          font-size: 1.4rem;
          transition: background .3s ease-out;
       }
-      li:hover {
-         background: #45567d;
-      }
+
       a {
          font-family: 'Poppins', sans-serif;
          text-decoration: none;
-         color: black;
+         color:rgb(190, 49, 68);
          font-weight: bold;
          cursor: pointer;
          transition: color .3s ease-out;
