@@ -108,6 +108,10 @@ a {
   left: calc(50vw - 65px);
 }
 
+.projects {
+  margin-bottom: 2em;
+}
+
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
