@@ -1,4 +1,8 @@
 [{
+  "name": "DOM Projects",
+  "address": "dom-projects"
+},
+{
   "name": "Roll Dice Game",
   "address": "roll-dice"
 },
