@@ -1,4 +1,8 @@
 [{
+    "name": "APIs Projects",
+    "address": "api-projects"
+},
+{
   "name": "DOM Projects",
   "address": "dom-projects"
 },
@@ -33,6 +37,10 @@
  {
   "name": "Battleship Game",
   "address": "battleships"
+ },
+ {
+  "name": "Responsive UI",
+  "address": "responsive-ui"
  },
  {
   "name": "Memory Game",
