@@ -103,4 +103,53 @@
 .output__tr:nth-child(even) {
   background-color: #eaeaea;
 }
+
+#github-link {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3em;
+  right: 5%;
+  z-index: 100;
+}
+
+#github-link i {
+  font-size: 3rem;
+  color: black;
+  -webkit-animation: bounce 2s ease-in-out 3;
+          animation: bounce 2s ease-in-out 3;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 /*# sourceMappingURL=styles.css.map */
