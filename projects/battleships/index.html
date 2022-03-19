@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>The Battleship Game</title>
    <script src="script.js" defer></script>
+   <script src="https://kit.fontawesome.com/d0d2d8a261.js" crossorigin="anonymous"></script>
    <style>
       body {
          background-color: black;
@@ -51,9 +52,36 @@
       .miss {
          background: url('miss.png') no-repeat center center;
       }
+      #github-link {
+         display: block;
+         width: max-content;
+         border-radius: 50%;
+         position: fixed;
+         bottom: 3em;
+         right: 5%;
+         z-index: 100;
+      }
+      #github-link i {
+         font-size: 3rem;
+         color: white;
+         animation: bounce 2s ease-in-out 3;
+      }
+      @keyframes bounce {
+         0% {
+         transform: scale(1);
+         }
+         50% {
+         transform: scale(1.5);
+         }
+         100% {
+         transform: scale(1);
+         }
+      }
    </style>
 </head>
 <body>
+   <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/battleships" id="github-link"><i class="fa-brands fa-github"></i></a>
+
    <div id="board">
       <div id="messageArea"></div>
       <table>
