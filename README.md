@@ -374,18 +374,6 @@ function handleKeyPress(e) {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 #### The Welcome Page
 
 1) make a hidden attribute work
@@ -396,16 +384,7 @@ function handleKeyPress(e) {
 
 #### Blackjack game
 
-1) An easy way to toggle buttons passing arguments
-
-```js
-function toggleBtns(none, block) {
-   none.style.display = "none";
-   block.style.display = "block";
-}
-```
-
-2) the .flow class to add space on top of children
+1) the .flow class to add space on top of children
 
 ```html
 <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
@@ -466,10 +445,6 @@ document.getElementById("searchTxt").value;
 - [Indexes Search By Clicking](https://stackoverflow.com/a/23528539/16906724) - finally this helped me figure out the way to fetch an index of an element or its relatives by clicking on it.
 
 
-
-
-
-
 #### From early projects
 - [Fetch input field content](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
 - [Align vertically (r)](https://ruseller.com/lessons.php?id=1248) - The article gives 6 methods to vertically align with css.
@@ -482,10 +457,10 @@ document.getElementById("searchTxt").value;
 ## Author
 
 - Github - [DannyLenk](https://github.com/DannyLenk)
-- Frontend Mentor - [@DannyLenk](https://www.frontendmentor.io/profile/DannyLenk)
 - Facebook - [Valerii Danylenko](https://www.facebook.com/valerii.danylenko)
 - LinkedIn - [Valerii Danylenko](https://www.linkedin.com/in/valerii-danylenko-74379212b)
 - insta - [valeriidanylenko](https://www.instagram.com/valeriidanylenko/?hl=ru)
+- Frontend Mentor - [@DannyLenk](https://www.frontendmentor.io/profile/DannyLenk)
 
 ## Acknowledgments
 
