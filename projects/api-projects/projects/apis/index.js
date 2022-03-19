@@ -17,7 +17,10 @@ function getAPIhtml(myAPI) {
 
 function displayAPIs(myAPIs) {
     myAPIs = myAPIs.entries
-    document.body.innerHTML = `<div class="my-apis">
+    document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/apis" id="github-link"><i class="fa-brands fa-github"></i></a>
+
+    <div class="my-apis">
         ${myAPIs.map(getAPIhtml).join('')}
     </div>`
 }
