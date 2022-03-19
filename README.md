@@ -11,6 +11,9 @@ This repository keeps my projects that aren't meant to get into my main portfoli
   - [Projects list](#projects-list)
   - [What I learned](#what-i-learned)
       - [APIs Projects](#apis-projects)
+      - [DOM Projects](#dom-projects)
+      - [Roll Dice Game](#roll-dice-game)
+      - [JS Projects (@andy)](#js-projects)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -171,6 +174,154 @@ getBooks().then(books => {
 ```
 
 
+#### DOM Projects
+
+1) An ability to save a classList in a variable
+
+```js
+document.querySelectorAll('.btn').forEach(btn => {
+   btn.addEventListener('click', (e) => {
+      const classList = e.target.classList;
+      console.log(classList);
+   })
+})
+```
+
+2) Load initial item
+
+```js
+window.addEventListener("DOMContentLoaded", function () {
+   // yada yada
+});
+```
+
+3) basic setup for mobile navbar
+
+```css
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 10rem;
+}
+/* ! Important thing here is to use "height: auto" for bigger sreen */
+@media screen and (min-width: 800px) {
+
+  .links {
+    height: auto;
+    display: flex;
+  }
+
+}
+```
+```js
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+   const links = document.querySelector('.links');
+   links.classList.toggle('show-links');
+})
+```
+
+4) the way to get the, for example, "data-id" property of a DOM element
+
+```js
+const category = e.currentTarget.dataset.id;
+```
+
+5) How I get the current year
+
+```js
+const date = document.querySelector('#date');
+date.innerHTML = new Date().getFullYear();
+```
+
+6) how to render links dynamically on click event
+!! make notice element.style.height must be a string type !!
+!! and also there will be a need to specify the 'height: auto;' property of the links-container in a widescreen mode with the !important !!
+
+```js
+const linksContainer = document.querySelector('.links-container');
+const links = document.querySelector('.links');
+
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+   const linksContainerHeight = linksContainer.getBoundingClientRect().height;
+   const linksHeight = links.getBoundingClientRect().height;
+
+   console.log('hello')
+   if (linksContainerHeight === 0) {
+      linksContainer.style.height = `${linksHeight}px`;
+   } else {
+      linksContainer.style.height = 0;
+   }
+})
+```
+
+7) the way to scroll down and up to some position
+
+```js
+   window.scrollTo({
+      left: 0,
+      top: position
+   })
+```
+
+8) the way to get the top position of an element
+
+```js
+   const sectionPosition = section.offsetTop;
+```
+
+#### Roll Dice Game
+
+1) The piece of code I've written to render 2 separate dices in the certain nested elements.
+```js
+   displayResult: function(player) {
+      const diceWrappers = document.getElementsByClassName('dice-wrapper');
+      let diceList = diceWrappers[player].children;
+      diceList[0].innerHTML = model.dices[0];
+      diceList[1].innerHTML = model.dices[1];
+   },
+```
+
+#### JS Projects (@andy)
+
+1) the way to make a copy of a DOM element with its children
+
+```js
+let someObj = {
+      createNewRow: function() {
+      const tBody = document.querySelector('#tBody');
+      const expenseRow = document.querySelector('.output__tr');
+
+      tBody.appendChild(expenseRow.cloneNode(true));
+   }
+}
+```
+
+2) learned to fit content in one or two even columns
+```css
+div {
+   border: 1px solid #CDCDCD;
+   min-width: 40%;
+   flex: 1 1 0;
+   margin-bottom: .5em;
+   text-align: left;
+   padding: .5em;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### The Welcome Page
 
@@ -218,14 +369,13 @@ document.getElementById("searchTxt").value;
 
 * aria (Accessible Rich Internet Applications);
 * CSS custom properties (figure out all the advantages of setting variables);
-* vh, vw values and their relevance;
 * the clamp() property;
 * CSS grid;
-* JS - setting local variables;
 * the minmax() property;
 * the translateX(Y) property;
 
-*Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+
+
 
 ### Useful resources
 #### APIs Projects
@@ -235,6 +385,25 @@ document.getElementById("searchTxt").value;
 - [Form.reset()](https://developer.mozilla.org/ru/docs/Web/API/HTMLFormElement/reset) - method to set,e.g., inputEl.value to "".
 - [Copy To Clipboard](https://stackoverflow.com/a/64422721/16906724) - helped me figure out how to copy content onclick for "Colors Generator".
 - [Show Time](https://stackoverflow.com/a/30245911/16906724) - article on date and time fetching.
+
+#### DOM Projects
+- [pageYOffSet](https://stackoverflow.com/a/28144651/16906724) - The answer helped me track the scroll event.
+- [month-days-number](https://stackoverflow.com/a/1184359/16906724) - how to find the number of days in a month.
+- [countdown-timer](https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript) - this contains the text format tutorial to build the timer.
+- [prevent-refresh](https://stackoverflow.com/a/22772518/16906724) - how to prevent a page from refreshing after submitting a form.
+
+#### Roll Dice Game
+- [childNodes vs children](https://stackoverflow.com/questions/10381296/best-way-to-get-child-nodes) - the first answer in a "user-freindly" way explains the practical difference between childNodes and children properties.
+- [Element.children](https://developer.mozilla.org/en-US/docs/Web/API/Element/children) - the article about Element.children property on MDN.
+
+#### JS Projects (@andy)
+- [Find li index](https://stackoverflow.com/questions/18295673/javascript-find-li-index-within-ul) - This helped me build the To-Do app.
+- [Data from form to table](https://stackoverflow.com/questions/18295673/javascript-find-li-index-within-ul) - Has the answer how to do it with the plain JS.
+- [remove item from HTML collection](https://stackoverflow.com/questions/37311003/how-to-remove-an-item-from-htmlcollection) - Helped with the expense-tracker.
+- [Indexes Search By Clicking](https://stackoverflow.com/a/23528539/16906724) - finally this helped me figure out the way to fetch an index of an element or its relatives by clicking on it.
+
+
+
 
 #### From early projects
 - [Fetch input field content](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
