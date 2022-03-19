@@ -14,6 +14,7 @@ This repository keeps my projects that aren't meant to get into my main portfoli
       - [DOM Projects](#dom-projects)
       - [Roll Dice Game](#roll-dice-game)
       - [JS Projects (@andy)](#js-projects)
+      - [Battleships Game](#battleships-game)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -284,7 +285,7 @@ document.querySelector('.nav-toggle').addEventListener('click', () => {
    },
 ```
 
-#### JS Projects (@andy)
+#### JS Projects
 
 1) the way to make a copy of a DOM element with its children
 
@@ -308,6 +309,68 @@ div {
    margin-bottom: .5em;
    text-align: left;
    padding: .5em;
+}
+```
+
+#### Battleships Game
+
+1) the way to present ships in the game within OOP
+
+```js
+let model = {
+  
+  ships = [
+    { locations: ["", "", ""], hits: ["", "", ""] },
+    { locations: ["", "", ""], hits: ["", "", ""] },
+    
+  ],
+  
+};
+```
+
+2) .indexOf() method returns an index of its value in the brackets. Used to find index inside both arrays and strings
+```js
+// I check if the locations array has a sought element and if it does the method returns its index. 
+// Otherwise it returns -1. The index variable keeps the result.
+let index = ship.locations.indexOf(guess);
+```
+
+3) string.charAt(index) method returns a character of a string, located on the specified index
+```js
+// I use it to get letter out of the user's input and turn it into a number later on 
+let firstChar = guess.charAt(0);
+```
+
+4) the isNaN() function determines whether a value is NaN (not a number) or not
+```js
+// I use it to check whether a user's guess follows the demands,
+// i.e. if any value is not a number, the warning appears
+if ( isNaN(row) || isNaN(column) ) {
+   alert("Oops, that is not on the board");
+}
+```
+
+5) making chosen functions load in advance
+```js
+window.onload = init;
+```
+
+6) using .click() method to add keyboard functionality to a button
+```js
+// used this method to invoke a function via keyboard event
+// the function is initially listens to mouse clicks
+function init() {
+(...)
+   const guessInput = document.querySelector('#guessInput');
+   guessInput.onkeyup = handleKeyPress;
+}
+
+function handleKeyPress(e) {
+   let fireButton = document.getElementById('fireButton');
+   if(e.key === 'Enter') {
+      fireButton.click();
+      return false;
+   }
 }
 ```
 
@@ -401,6 +464,8 @@ document.getElementById("searchTxt").value;
 - [Data from form to table](https://stackoverflow.com/questions/18295673/javascript-find-li-index-within-ul) - Has the answer how to do it with the plain JS.
 - [remove item from HTML collection](https://stackoverflow.com/questions/37311003/how-to-remove-an-item-from-htmlcollection) - Helped with the expense-tracker.
 - [Indexes Search By Clicking](https://stackoverflow.com/a/23528539/16906724) - finally this helped me figure out the way to fetch an index of an element or its relatives by clicking on it.
+
+
 
 
 
