@@ -2,13 +2,14 @@
 
 This repository keeps my projects that aren't meant to get into my main portfolio
 
-![Design preview for the Space tourism website coding challenge](./img/preview.png)
+![Design preview for the Space tourism website coding challenge](./portfolio.png)
 
 ## Welcome! 👋
 ## Table of contents
 
 - [My process](#my-process)
   - [Projects list](#projects-list)
+    - [APIs Projects](#apis-projects)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
@@ -19,14 +20,105 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 
 ### Projects list
 
-- BBQ school registration form
-- Cars company survey form
-- Seeds company landing page
-- Blackjack game
+- APIs Projects
+- DOM Projects
 - Roll dice game
+- Note Taker
+- Expense Tracker
+- To-Do List
+- BBQ school registration form
+- Blackjack
 - Minimalism blog
+- Battleships Game
+- Responsive UI design
+- Memory Game
+- Emoji Personality
+- Leads Tracker Chrome Extension
+- Seeds company landing page
+- Cars company survey form
+
 
 ### What I learned
+
+#### APIs Projects
+
+1) 1) GET first 5 blog posts from an API
+
+```js
+    fetch('https://apis.scrimba.com/jsonplaceholder/posts')
+        .then(response => response.json())
+        .then(data => console.log(data.slice(0, 5)))
+
+```
+
+2) POST new data through an API
+
+```js
+fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
+    method: "POST",
+    body: JSON.stringify({
+        title: "Buy Milk",
+        completed: false
+    }),
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
+    .then(res => res.json())
+    .then(data => console.log(data))
+```
+
+3) Not triggering a click event when targeting a child element
+
+```scss
+   &__dropbtn--arrow,
+   &__dropbtn--content {
+      pointer-events: none;
+   }
+```
+
+4) !! ".disabled" class for buttons
+
+```css
+.disabled {
+    pointer-events: none;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+    /* cursor: not-allowed; */
+}
+```
+
+5) remove <a> default styling
+
+```css
+   a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+  }
+```
+
+6) full screen background image
+
+```css
+    html { 
+        background: url(images/bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+```
+
+7) making text more readable
+
+```css
+p {
+    /* text-shadow: 1px 1px 2px #474747; */
+    text-shadow: 0px 0px 20px #aaaaaa;
+}
+```
+
 
 #### The Welcome Page
 
@@ -102,4 +194,4 @@ document.getElementById("searchTxt").value;
 
 ## Acknowledgments
 
-Thank you, Scrimba and its community. Thank you, Front end mentor and its community
+Thank you, Scrimba and its community. Thank you FreeCodeCamp and its community. Thank you, Front-end mentor and its community.
