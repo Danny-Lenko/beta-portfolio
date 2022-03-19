@@ -37,7 +37,10 @@ function getPokemonHtml(aPokemon) {
 
 function displayPokedex(allPokemon) {
     console.log(allPokemon[0])
-    document.body.innerHTML = `<div class="my-pokedex">
+    document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/pokedex" id="github-link"><i class="fa-brands fa-github"></i></a>
+
+    <div class="my-pokedex">
         ${allPokemon.map(getPokemonHtml).join('')}
     </div>`
 }

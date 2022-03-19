@@ -15,6 +15,8 @@ getUsers().then(users => {
     let sampleUser = users[0]
     
     document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/users-online" id="github-link"><i class="fa-brands fa-github"></i></a>
+
     <div class="header">Header</div>
     <div class="my-online-users">
         ${users.map(user => getUserDiv(user)).join('')}

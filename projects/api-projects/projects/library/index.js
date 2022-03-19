@@ -20,7 +20,10 @@ function getBookHtml(book) {
 getBooks().then(displayLibrary).catch(err => console.log(err));
 
 function displayLibrary(books) {
-    document.body.innerHTML = `<div class="my-library">
+    document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/library" id="github-link"><i class="fa-brands fa-github"></i></a>
+
+    <div class="my-library">
         ${books.map(getBookHtml).join('')}
     </div>`
 }

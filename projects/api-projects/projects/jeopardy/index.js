@@ -1,15 +1,3 @@
-/* 
-    Jeopardy (Challenge)
-    
-    Update getCategories to take 
-        count/offset arguments
-    Fetch 5 Categories (Update the display as necessary)
-    
-    Write a getClueHtml() function
-        calculate grid-row-start based on the input value
-        which will always be a multiple of 100 
-*/
-
 async function getCategories(count, offset) {
     let response = await fetch(`https://jservice.io/api/categories?count=${count}&offset=${offset}`)
     let data = await response.json()
@@ -32,7 +20,10 @@ function getCategoryHtml(category) {
 
 getCategories(5).then(categories => {
     console.log(categories)
-    document.body.innerHTML = `<div class="board">
+    document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/jeopardy" id="github-link"><i class="fa-brands fa-github"></i></a>
+    
+    <div class="board">
         ${categories.map(getCategoryHtml).join('')}
     </div>`
 })

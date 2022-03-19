@@ -6,7 +6,10 @@ async function getUser() {
 
 getUser().then(user => {
     console.log(user)
-    document.body.innerHTML = `<div class="user-profile">
+    document.body.innerHTML = `
+    <a target="_blank" href="https://github.com/DannyLenk/beta-portfolio/tree/main/projects/api-projects/projects/user-profile" id="github-link"><i class="fa-brands fa-github"></i></a>
+
+    <div class="user-profile">
         <div class="user-profile-header">
             <div>${user.name}</div>
             <div>@${user.username}</div>
