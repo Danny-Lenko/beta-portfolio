@@ -61,5 +61,9 @@
  {
    "name": "Survey Form",
    "address": "auto-selection"
- }
+ },
+ {
+  "name": "Facts About React",
+  "address": "r-react-facts/public"
+  }
 ]
