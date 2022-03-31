@@ -11,9 +11,9 @@ async function getAllProjects(val) {
 }
 
 function getProjectHtml(aProject) {
-   return `
+   return (aProject.hyperlink) ? `
       <div class="projects__item">
-         <a href="projects/${aProject.address}/index.html" target="blank">
+         <a href="${aProject.hyperlink}" target="blank">
             <div class="projects__img-div">
                <img src="projects/${aProject.address}/portfolio.png" alt="">
             </div>
@@ -23,8 +23,22 @@ function getProjectHtml(aProject) {
                <span class="code">&#47;&gt;</span>
             </p>
          </a>
-      </div>
-   `
+      </div> 
+      `
+      : `
+         <div class="projects__item">
+            <a href="projects/${aProject.address}/index.html" target="blank">
+               <div class="projects__img-div">
+                  <img src="projects/${aProject.address}/portfolio.png" alt="">
+               </div>
+               <p class="projects__title">
+                  <span class="code">&lt;</span>
+                     ${aProject.name}
+                  <span class="code">&#47;&gt;</span>
+               </p>
+            </a>
+         </div>
+      `
 }
 
 function displayProjects(allProjects) {
