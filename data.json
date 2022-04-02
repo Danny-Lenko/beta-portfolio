@@ -47,6 +47,11 @@
   "address": "memory-game"
  },
  {
+  "name": "R Business Card",
+  "address": "r-business-card",
+  "hyperlink": "https://r-business-card-dannylenk.vercel.app/"
+ },
+ {
    "name": "Your Emoji Personality",
    "address": "emoji-personality"
  },
@@ -63,7 +68,7 @@
    "address": "auto-selection"
  },
  {
-  "name": "Facts About React",
+  "name": "R Facts About React",
   "address": "r-react-facts/public",
   "hyperlink": "https://r-react-about-dannylenk.vercel.app/"
   }

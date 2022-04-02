@@ -72,6 +72,12 @@ function fixAndUnfixNavbar() {
 }
 window.addEventListener('scroll', fixAndUnfixNavbar);
 
+// =========================================== preloader
+
+window.onload = () => {
+   document.querySelector('.preloader').classList.add('hide-preloader');
+}
+
 
 
 

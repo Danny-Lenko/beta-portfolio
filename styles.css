@@ -345,4 +345,41 @@ body {
 .footer__link {
   color: rgba(240, 240, 240, 0.85);
 }
+
+.fa-github {
+  font-size: 1.5em;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.fa-github:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+  z-index: 999;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
 /*# sourceMappingURL=styles.css.map */
