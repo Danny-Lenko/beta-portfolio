@@ -48,7 +48,8 @@
  },
  {
   "name": "R Travel Journal",
-  "address": "r-travel-journal/public"
+  "address": "r-travel-journal/public",
+  "hyperlink": "https://r-travel-journal-dannylenk.vercel.app/"
  },
  {
   "name": "R Business Card",
