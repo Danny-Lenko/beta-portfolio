@@ -47,6 +47,10 @@
   "address": "memory-game"
  },
  {
+  "name": "R Travel Journal",
+  "address": "r-travel-journal/public"
+ },
+ {
   "name": "R Business Card",
   "address": "r-business-card/public",
   "hyperlink": "https://r-business-card-dannylenk.vercel.app/"
