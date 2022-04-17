@@ -46,6 +46,11 @@
   "name": "Memory Game",
   "address": "memory-game"
  },
+  {
+    "name": "R Facts About React",
+    "address": "r-react-facts/public",
+    "hyperlink": "https://r-react-about-dannylenk.vercel.app/"
+  },
  {
   "name": "R Travel Journal",
   "address": "r-travel-journal/public",
@@ -53,7 +58,7 @@
  },
  {
   "name": "R Business Card",
-  "address": "r-business-card/public",
+  "address": "r-business-card",
   "hyperlink": "https://r-business-card-dannylenk.vercel.app/"
  },
  {
@@ -71,10 +76,5 @@
  {
    "name": "Survey Form",
    "address": "auto-selection"
- },
- {
-  "name": "R Facts About React",
-  "address": "r-react-facts/public",
-  "hyperlink": "https://r-react-about-dannylenk.vercel.app/"
-  }
+ }
 ]
