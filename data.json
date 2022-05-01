@@ -11,6 +11,11 @@
   "address": "roll-dice"
 },
 {
+  "name": "Space Tourism Website",
+  "address": "space-tourism",
+  "hyperlink": "https://space-tourism-website-dannylenk.vercel.app/"
+},
+{
   "name": "Note Taker",
   "address": "note-taker"
 },
