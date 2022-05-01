@@ -7,6 +7,14 @@
   "address": "dom-projects"
 },
 {
+  "name": "Snake Game",
+  "address": "snake"
+},
+{
+  "name": "Pacman",
+  "address": "pacman"
+},
+{
   "name": "Roll Dice Game",
   "address": "roll-dice"
 },

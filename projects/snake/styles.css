@@ -1,0 +1,91 @@
+body {
+   margin: 0 auto;
+   width: 400px;
+   text-align: center;
+}
+
+button {
+   cursor: pointer;
+}
+
+.gridEl {
+   border: 2px solid black;
+   width: 200px;
+   height: 200px;
+   margin: 0 auto 1em;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.square {
+   width: 20px;
+   height: 20px;
+   background: lightgrey;
+}
+.small-square {
+   width: 10px;
+   height: 10px;
+   background: lightgrey;
+}
+
+.snake {
+   background: brown;
+}
+
+.apple {
+   background: green;
+}
+
+.mode {
+   display: none;
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(23, 32, 42, .95);
+}
+#modeBtn,
+#startBtn,
+#pauseBtn {
+   width: 120px;
+   padding: 6px 0;
+}
+.mode__h2 {
+   font-size: 4rem;
+   letter-spacing: 5px;
+   text-transform: uppercase;
+   margin-top: 30vh;
+   color: white;
+}
+.mode button {
+   font-size: 1.2rem;
+   padding: .5em 0;
+   width: 170px
+}
+
+#smallerGrid {
+   display: none;
+}
+#thickerSnake {
+   display: none;
+}
+#wallsOn {
+   display: none;
+}
+#speed20 {
+   display: none;
+}
+#speedNormal {
+   display: none;
+}
+#pauseBtn {
+   display: none;
+}
+
+#exitModal {
+   display: block;
+   margin: 20px auto;
+}
+
+
