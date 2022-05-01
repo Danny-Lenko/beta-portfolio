@@ -26,7 +26,10 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 
 - APIs Projects
 - DOM Projects
-- Roll dice game
+- Snake Game
+- Pacman
+- Roll Dice Game
+- Space Tourism Website
 - Note Taker
 - Expense Tracker
 - To-Do List
@@ -36,6 +39,7 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 - Battleships Game
 - Responsive UI design
 - Memory Game
+- React built SPAs
 - Emoji Personality
 - Leads Tracker Chrome Extension
 - Seeds company landing page
