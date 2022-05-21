@@ -1,6 +1,6 @@
 "use strict"
 
-let value = 6;
+let value = 100;
 
 const btnHide = document.querySelector('#btnHide');
 
@@ -42,7 +42,6 @@ function getProjectHtml(aProject) {
 }
 
 function displayProjects(allProjects) {
-   console.log(allProjects[0]);
    document.querySelector('#projectsEl').innerHTML = `${allProjects.map(getProjectHtml).join('')}`;
 }
 
@@ -75,6 +74,8 @@ window.addEventListener('scroll', fixAndUnfixNavbar);
 // =========================================== preloader
 
 window.onload = () => {
+   value = 6
+   getAllProjects(value).then(displayProjects);
    document.querySelector('.preloader').classList.add('hide-preloader');
 }
 

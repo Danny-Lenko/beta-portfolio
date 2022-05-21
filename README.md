@@ -37,6 +37,7 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 - Blackjack
 - Minimalism blog
 - Battleships Game
+- React Context App
 - Responsive UI design
 - Memory Game
 - React built SPAs
@@ -123,7 +124,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
 ```css
 p {
     /* text-shadow: 1px 1px 2px #474747; */
-    text-shadow: 0px 0px 20px #aaaaaa;
+    text-shadow: 0 0 20px #aaaaaa;
 }
 ```
 
