@@ -90,7 +90,7 @@ body {
    }
 }
 
-// ===================================== images section
+// ===================================== projects section
 
 .projects {
    background: #45567d;
@@ -199,7 +199,7 @@ body {
    .projects__heading {
       border: none;
       line-height: 1;
-      margin: 2em .2em 1em;
+      margin: 0 .2em 1em;
       padding-top: 3em;
    }
 }
@@ -210,7 +210,7 @@ body {
       grid-gap: 1em;
    }
    .projects.container {
-      padding: 0 .5em;
+      padding: 0 0.5em 2em;
    }
 }
 

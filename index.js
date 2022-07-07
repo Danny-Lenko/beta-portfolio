@@ -1,12 +1,15 @@
 "use strict"
 
 let value = 100;
+let projectsNum;
+let shownProjectsNum = 6;
 
 const btnHide = document.querySelector('#btnHide');
 
 async function getAllProjects(val) {
    const res = await fetch("data.json");
    const data = await res.json();
+   projectsNum = data.length
    return data.slice(0, val);
 }
 
@@ -49,8 +52,12 @@ getAllProjects(value).then(displayProjects);
 
 document.querySelector('#btnMore').addEventListener('click', () => {
    value += 6;
+   shownProjectsNum += 6;
    getAllProjects(value).then(displayProjects);
    btnHide.style.display = "inline-block";
+   if (shownProjectsNum >= projectsNum) {
+      document.querySelector('#btnMore').style.display = "none";
+   }
 })
 
 btnHide.addEventListener('click', () => {

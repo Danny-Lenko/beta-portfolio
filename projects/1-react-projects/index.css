@@ -126,10 +126,28 @@ a {
   transition: transform 500ms cubic-bezier(.5, 0, .5, 1),
     box-shadow 500ms ease-out;
   cursor: pointer;
+  position: relative;
 }
 .projects__item:hover {
   transform: scale(1.05);
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.github-link {
+  position: absolute;
+  right: 15px;
+  bottom: 6px;
+  display: block;
+  width: max-content;
+  border-radius: 50%;
+  z-index: 10000;
+}
+.github-link i {
+  font-size: 2rem;
+  color: black;
+  transition: transform 0.5s ease-out;
+}
+.github-link i:hover {
+  transform: scale(1.3);
 }
 
 .projects__img-div {
