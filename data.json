@@ -1,4 +1,8 @@
 [{
+  "name": "React Projects",
+  "address": "1-react-projects"
+},
+  {
     "name": "APIs Projects",
     "address": "api-projects"
 },
