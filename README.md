@@ -24,6 +24,7 @@ This repository keeps my projects that aren't meant to get into my main portfoli
 
 ### Projects list
 
+- React Projects
 - APIs Projects
 - DOM Projects
 - Snake Game
