@@ -139,7 +139,7 @@ a {
   display: block;
   width: max-content;
   border-radius: 50%;
-  z-index: 10000;
+  z-index: 100;
 }
 .github-link i {
   font-size: 2rem;
