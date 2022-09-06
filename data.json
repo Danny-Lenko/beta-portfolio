@@ -23,6 +23,21 @@
   "address": "roll-dice"
 },
 {
+  "name": "Materialize Landing",
+  "address": "materialize-landing",
+  "hyperlink": "https://effortless-rugelach-7045c9.netlify.app/"
+},
+{
+  "name": "Bootstrap Landing",
+  "address": "bootstrap-landing",
+  "hyperlink": "https://precious-youtiao-821cb9.netlify.app/"
+},
+{
+  "name": "Logo Landing Page",
+  "address": "logo-landing",
+  "hyperlink": "https://logo-ecommerce.netlify.app/"
+},
+{
   "name": "Space Tourism Website",
   "address": "space-tourism",
   "hyperlink": "https://space-tourism-website-dannylenk.vercel.app/"
@@ -30,6 +45,11 @@
 {
   "name": "Note Taker",
   "address": "note-taker"
+},
+{
+  "name": "TS Registration Form",
+  "address": "ts-registr-form",
+  "hyperlink": "https://stupendous-meringue-62c670.netlify.app/"
 },
 {
   "name": "Expense Tracker",
@@ -55,6 +75,15 @@
   "name": "Battleship Game",
   "address": "battleships"
  },
+{
+  "name": "TS Weather Widget",
+  "address": "ts-weather-widget"
+},
+  {
+    "name": "TS Financial Logger",
+    "address": "ts-fin-logger",
+    "hyperlink": "https://sensational-genie-e4293b.netlify.app/"
+  },
   {
     "name": "R React Context",
     "address": "r-react-context",
