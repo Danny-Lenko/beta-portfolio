@@ -75,10 +75,6 @@
   "name": "Battleship Game",
   "address": "battleships"
  },
-{
-  "name": "TS Weather Widget",
-  "address": "ts-weather-widget"
-},
   {
     "name": "TS Financial Logger",
     "address": "ts-fin-logger",
